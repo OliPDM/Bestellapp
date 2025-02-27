@@ -20,33 +20,21 @@ function init() {
     renderDishes();
 }
 
-// Funktion zum Rendern der Gerichte
+
 function renderDishes() {
-    const dishesContainer = document.getElementById("dishes");
-
-    // Inhalt des Containers leeren, falls vorhanden
-    dishesContainer.innerHTML = "";
-
-    // Jedes Gericht dynamisch erstellen und hinzufügen
-    allDishes.forEach(dish => {
-        const dishDiv = document.createElement("div");
-        dishDiv.classList.add("dish");
-
-        dishDiv.innerHTML = `
-        <p class="dish__title">${dish.title}</p>
-        <p class="dish__description">${dish.description}</p>
-        <p class="dish__price">${dish.price}</p>
-      `;
-
-        dishesContainer.appendChild(dishDiv);
+    allDishes.forEach((dish, i) => {
+        document.getElementById(`title${i}`).innerHTML = dish.title;
+        document.getElementById(`description${i}`).innerHTML = dish.description;
+        document.getElementById(`price${i}`).innerHTML = dish.price;
     });
 }
 
 
+
 // Select the burger icon and the menu
 document.addEventListener("DOMContentLoaded", () => {
-    const burger = document.getElementById("burger");
-    const menu = document.getElementById("menu");
+    let burger = document.getElementById("burger");
+    let menu = document.getElementById("menu");
 
     // Add click event listener to toggle menu visibility
     burger.addEventListener("click", () => {
