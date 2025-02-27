@@ -111,10 +111,17 @@ nav {
 }
 
 
-.info__container__icons {}
+.info__container__icons {
+    border: solid;
+}
 
 
 .food__container {
     display: flex;
     flex-direction: column;
+}
+
+.dishes_container {
+    border: solid;
+    width: 100%;
 }
