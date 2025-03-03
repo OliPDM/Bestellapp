@@ -30,6 +30,11 @@ function renderDishes() {
 }
 
 
+function addToBasket() {
+
+}
+
+
 
 // Select the burger icon and the menu
 document.addEventListener("DOMContentLoaded", () => {

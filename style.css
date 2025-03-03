@@ -14,7 +14,7 @@ header {
     align-items: center;
     font-size: small;
     height: 8vh;
-    width: 100%;
+    width: 100vw;
     background-color: rgb(255, 165, 0);
 }
 
@@ -91,16 +91,16 @@ nav {
 
 .cover__img {
     height: 23vh;
-    width: 100%;
+    width: 100vw;
     object-fit: cover;
     object-position: 100% 42%;
 }
 
 
 .main__container {
-    margin: 30px 10%;
     display: flex;
     justify-content: space-between;
+    padding: 5px;
 }
 
 
@@ -121,7 +121,35 @@ nav {
     flex-direction: column;
 }
 
-.dishes_container {
+
+.menu_overwiev_container {
     border: solid;
-    width: 100%;
+    margin: 2px;
+    padding-left: 2px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.dishes_container {}
+
+
+.basket_container {
+    border: solid;
+}
+
+
+.content_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+}
+
+
+.add_button {
+    border: 2px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
 }
