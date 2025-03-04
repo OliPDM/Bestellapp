@@ -16,6 +16,9 @@ let allDishes = [
     }
 ];
 
+let basket = [];
+
+
 function init() {
     renderDishes();
 }
@@ -30,10 +33,30 @@ function renderDishes() {
 }
 
 
-function addToBasket() {
-
+function addToBasket(i) {
+    basket.push(allDishes[i]);
+    renderBasket();
 }
 
+function renderBasket() {
+    let basketContainer = document.getElementById("basket");
+    basketContainer.innerHTML = "<h2>Warenkorb</h2>";
+
+    basket.forEach((item, i) => {
+        basketContainer.innerHTML += `
+        <div class="basket-item">
+        <p><strong>${item.title}</strong> - ${item.price}</p>
+        <button onclick="removeFromBasket(${i})">🗑️</button>
+    </div>
+`;
+    });
+}
+
+
+function removeFromBasket(i) {
+    basket.splice(i, 1); // Element aus Warenkorb entfernen
+    renderBasket(); // Warenkorb erneut rendern
+}
 
 
 // Select the burger icon and the menu
